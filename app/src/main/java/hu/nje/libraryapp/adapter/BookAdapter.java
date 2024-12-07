@@ -96,5 +96,3 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.BookViewHolder
             buttonDelete = itemView.findViewById(R.id.button_delete);
         }
     }
-}
-    }
