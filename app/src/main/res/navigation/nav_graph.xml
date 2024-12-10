@@ -1,6 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/nav_graph">
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/bookListFragment">
 
+    <fragment
+        android:id="@+id/bookListFragment"
+        android:name="hu.nje.libraryapp.BookListFragment"
+        android:label="Book List"
+        tools:layout="@layout/fragment_book_list">
+        <action
+            android:id="@+id/action_bookListFragment_to_addBookFragment"
+            app:destination="@id/addBookFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/addBookFragment"
+        android:name="hu.nje.libraryapp.AddBookFragment"
+        android:label="Add Book"
+        tools:layout="@layout/fragment_add_book" >
+
+        <action
+            android:id="@+id/action_addBookFragment_to_bookListFragment"
+            app:destination="@id/bookListFragment"/>
+    </fragment>
 </navigation>
