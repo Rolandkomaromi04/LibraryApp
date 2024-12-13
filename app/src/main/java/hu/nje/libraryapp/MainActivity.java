@@ -19,12 +19,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        // Engedélyezd az "edge-to-edge" megjelenítést
+        // Engedélyezés az "edge-to-edge" megjelenítéshez
         WindowCompat.setDecorFitsSystemWindows(getWindow(), false);
 
         setContentView(R.layout.activity_main);
 
-        // Állítsd be a padding-et a rendszer sávok alapján
+        // Padding beállítása a rendszer sávok alapján
         View mainView = findViewById(R.id.main);
         ViewCompat.setOnApplyWindowInsetsListener(mainView, (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
